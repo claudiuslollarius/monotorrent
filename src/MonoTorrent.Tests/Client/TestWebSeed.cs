@@ -27,7 +27,7 @@ namespace MonoTorrent.Tests.Client
                     listener.Start();
                     break;
                 }
-                catch
+                catch(Exception e)
                 {
                 }
             }
@@ -70,7 +70,7 @@ namespace MonoTorrent.Tests.Client
         private HttpConnection connection;
         private readonly HttpListener listener;
         //private RequestMessage m;
-        private readonly string listenerURL = "http://127.0.0.1:120/announce/";
+        private readonly string listenerURL = "http://127.0.0.1:10101/announce/";
         private int amountSent;
 
         private PeerId id;

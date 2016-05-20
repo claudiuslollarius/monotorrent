@@ -32,7 +32,7 @@ namespace MonoTorrent.Tests.Common
         [Fact]
         public void NullHex()
         {
-            Assert.Throws<ArgumentException>(() => InfoHash.FromHex(null));
+            Assert.Throws<ArgumentNullException>(() => InfoHash.FromHex(null));
         }
     }
 }

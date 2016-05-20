@@ -46,7 +46,7 @@ namespace MonoTorrent.Tests.Common
             var magnet = string.Format("magnet?xt=urn:btih:{0}", hash.ToHex());
             MagnetLink other = null;
             Assert.Throws<FormatException>(() => other = new MagnetLink(magnet));
-            Assert.Equal(hash, other.InfoHash);
+            //Assert.Equal(hash, other.InfoHash);
         }
 
         [Fact]
@@ -56,7 +56,7 @@ namespace MonoTorrent.Tests.Common
             var magnet = string.Format("magnet:?xt=urn:btih:", hash.ToHex());
             MagnetLink other = null;
             Assert.Throws<FormatException>(() => other = new MagnetLink(magnet));
-            Assert.Equal(hash, other.InfoHash);
+            //Assert.Equal(hash, other.InfoHash);
         }
 
         [Fact]
@@ -66,7 +66,7 @@ namespace MonoTorrent.Tests.Common
             var magnet = string.Format("magnet:?xt=urn:btih:23526246235623564234365879634581726345981", hash.ToHex());
             MagnetLink other = null;
             Assert.Throws<FormatException>(() => other = new MagnetLink(magnet));
-            Assert.Equal(hash, other.InfoHash);
+            //Assert.Equal(hash, other.InfoHash);
         }
 
         [Fact]
@@ -89,7 +89,7 @@ namespace MonoTorrent.Tests.Common
         [Fact]
         public void NullMagnetLink()
         {
-            Assert.Throws<FormatException>(() => new MagnetLink(null));
+            Assert.Throws<ArgumentNullException>(() => new MagnetLink(null));
         }
 
         [Fact]

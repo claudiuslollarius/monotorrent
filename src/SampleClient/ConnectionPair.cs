@@ -13,7 +13,7 @@ namespace SampleClient
 
         public ConnectionPair(int port)
         {
-            socketListener = new TcpListener(port);
+            socketListener = new TcpListener(IPAddress.Any, port);
             socketListener.Start();
 
             var s1a = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);

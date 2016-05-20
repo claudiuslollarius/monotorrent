@@ -10,6 +10,8 @@ namespace MonoTorrent.Tests.Client
 {
     public class TestRig : IDisposable
     {
+        public static readonly Uri DefaultUri = new Uri("http://127.0.0.1:10101/announce/");
+
         private static readonly Random Random = new Random(1000);
         private static int port = 10000;
         private readonly int piecelength;
@@ -176,9 +178,9 @@ namespace MonoTorrent.Tests.Client
             AddAnnounces(dict, tier);
             AddFiles(infoDict, files);
             if (files.Length == 1)
-                dict["url-list"] = (BEncodedString) "http://127.0.0.1:120/announce/File1.exe";
+                dict["url-list"] = (BEncodedString)(new Uri(DefaultUri, "File1.exe").ToString());
             else
-                dict["url-list"] = (BEncodedString) "http://127.0.0.1:120/announce";
+                dict["url-list"] = (BEncodedString)DefaultUri.ToString();
             dict["creation date"] = (BEncodedNumber) (int) (DateTime.Now - new DateTime(1970, 1, 1)).TotalSeconds;
             dict["encoding"] = (BEncodedString) "UTF-8";
             dict["info"] = infoDict;

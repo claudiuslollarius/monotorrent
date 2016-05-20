@@ -321,8 +321,8 @@
     <Compile Include="Client\AsyncConnectState.cs" />
     <Compile Include="Client\AsyncIOState.cs" />
     <Compile Include="Client\PeerIO.cs" />
-    <Compile Include="Client\NetworkIO\State.cs" />
-    <Compile Include="Client\NetworkIO\ReceiveMessageState.cs" />
+    <Compile Include="Client\Network\State.cs" />
+    <Compile Include="Client\Network\ReceiveMessageState.cs" />
     <Compile Include="Common\MagnetLink.cs" />
     <Compile Include="Common\UriHelper.cs" />
     <Compile Include="Common\TorrentEditor.cs" />

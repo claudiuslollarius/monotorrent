@@ -4,11 +4,12 @@ using MonoTorrent.Client.Connections;
 using MonoTorrent.Client.Encryption;
 using MonoTorrent.Client.Messages;
 using MonoTorrent.Client.Messages.Standard;
+using MonoTorrent.Client.Network;
 using MonoTorrent.Common;
 
 namespace MonoTorrent.Client
 {
-    internal static partial class PeerIO
+    internal static class PeerIO
     {
         private const int MaxMessageLength = Piece.BlockSize*4;
 

@@ -61,11 +61,14 @@
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
     <Compile Include="BigInteger.cs" />
+    <Compile Include="Creator.cs" />
     <Compile Include="DhtEngine.cs" />
+    <Compile Include="ErrorCode.cs" />
     <Compile Include="EventArgs\NodeAddedEventArgs.cs" />
-    <Compile Include="EventArgs\SendMessageEventArgs.cs" />
+    <Compile Include="EventArgs\SendQueryEventArgs.cs" />
     <Compile Include="EventArgs\TaskCompleteEventArgs.cs" />
     <Compile Include="Listeners\DhtListener.cs" />
+    <Compile Include="Listeners\MessageReceived.cs" />
     <Compile Include="Message.cs" />
     <Compile Include="MessageException.cs" />
     <Compile Include="MessageFactory.cs" />
@@ -82,6 +85,7 @@
     <Compile Include="Messages\Responses\PingResponse.cs" />
     <Compile Include="Messages\Responses\ResponseMessage.cs" />
     <Compile Include="Nodes\NodeId.cs" />
+    <Compile Include="ResponseCreator.cs" />
     <Compile Include="RoutingTable\Bucket.cs" />
     <Compile Include="Nodes\NodeState.cs" />
     <Compile Include="Nodes\Node.cs" />
@@ -92,7 +96,7 @@
     <Compile Include="Tasks\ITask.cs" />
     <Compile Include="Tasks\RefreshBucketTask.cs" />
     <Compile Include="Tasks\ReplaceNodeTask.cs" />
-    <Compile Include="Tasks\SendMessageTask.cs" />
+    <Compile Include="Tasks\SendQueryTask.cs" />
     <Compile Include="Tasks\Task.cs" />
     <Compile Include="TransactionId.cs" />
     <Compile Include="Nodes\TokenManager.cs" />
